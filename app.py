@@ -1,8 +1,5 @@
 from sklearn.base import BaseEstimator, TransformerMixin
 from imblearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler
-from imblearn.over_sampling import SMOTE
-from sklearn.ensemble import RandomForestClassifier
 import streamlit as st
 import pandas as pd
 import numpy as np
