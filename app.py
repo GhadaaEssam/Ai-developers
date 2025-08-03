@@ -58,7 +58,3 @@ if submit:
 
     st.subheader("🔮 Prediction:")
     st.write("✅ Successful Task" if prediction[0] == 1 else "❌ Unsuccessful Task")
-
-    st.subheader("📊 Prediction Probabilities:")
-    st.write(f"Class 0 (Unsuccessful): {proba[0][0]:.2f}")
-    st.write(f"Class 1 (Successful): {proba[0][1]:.2f}")
