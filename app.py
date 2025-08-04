@@ -22,20 +22,20 @@ Pipeline = joblib.load("model_pipeline.pkl")
 # ===== UI =====
 st.image("busydev.png", width=700)  # You can remove or change caption
 st.title("🔍 Task Success Prediction App")
-st.write("This app predicts whether a task will be successful or not based on how your day went.")
+st.caption("Your daily habit whisperer — see if you're set up for success today 🎯")
 
 st.header("📥 Please answer the following questions about your day:")
 
 with st.form("input_form"):
-    hours_coding = st.number_input("How many hours did you spend coding today?", min_value=0.0)
-    coffee_intake_mg = st.number_input("Approximately how many milligrams of coffee did you consume today?", min_value=0.0)
-    distractions = st.number_input("How many distractions or interruptions did you experience while working?", min_value=0)
-    sleep_hours = st.number_input("How many hours of sleep did you get last night?", min_value=0.0)
-    commits = st.slider("How many code commits did you push today?", min_value=0)
-    bugs_reported = st.slider("How many bugs were reported in the code you wrote today?", min_value=0)
-    ai_usage_hours = st.number_input("How many hours did you spend using AI tools like ChatGPT or GitHub Copilot?", min_value=0.0)
-    cognitive_load = st.slider("On a scale from 1 to 10, how mentally exhausted do you feel?", min_value=1, max_value=10)
-
+    hours_coding = st.number_input("🧑‍💻 How many hours did you spend focused on coding today?", min_value=0.0)
+    coffee_intake_mg = st.number_input("☕ Roughly how much coffee (mg) did you drink today?", min_value=0.0)
+    distractions = st.number_input("🔔 How many times were you interrupted (meetings, Slack, etc.)?", min_value=0)
+    sleep_hours = st.number_input("😴 How many hours of sleep did you get last night?", min_value=0.0)
+    commits = st.slider("📤 How many commits did you push today?", min_value=0, max_value=20)
+    bugs_reported = st.slider("🐞 How many bugs were reported in your code today?", min_value=0, max_value=10)
+    ai_usage_hours = st.number_input("🤖 How many hours did you use AI tools like ChatGPT or Copilot?", min_value=0.0)
+    cognitive_load = st.slider("🧠 How mentally drained do you feel right now?", min_value=1, max_value=10)
+    0
     submit = st.form_submit_button("Predict")
 
 if submit:
@@ -53,5 +53,8 @@ if submit:
     prediction = Pipeline.predict(input_df)
     proba = Pipeline.predict_proba(input_df)
 
-    st.subheader("🔮 Prediction:")
-    st.write("✅ Successful Task" if prediction[0] == 1 else "❌ Unsuccessful Task")
+    st.subheader("🔮 Your Habit Check-In Says:")
+    if prediction[0] == 1:
+        st.success("✅ You're on track for a productive day! Keep the momentum going 🚀")
+    else:
+        st.error("❌ Hmm, today might be a bit off. Small tweaks could make a big difference 🛠️")
