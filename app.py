@@ -34,7 +34,7 @@ with st.form("input_form"):
     commits = st.slider("How many commits you usually push per day?", min_value=0, max_value=20)
     bugs_reported = st.slider(" How many bugs you usually report per day?", min_value=0, max_value=10)
     ai_usage_hours = st.slider("How many hours do you usually use AI tools like ChatGPT or Copilot?", min_value=0.0,max_value=12.0)
-    cognitive_load = st.slider("How mentally drained do you feel right now?", min_value=1, max_value=10)
+    cognitive_load = st.slider("On a scale from 1 to 10, How mentally drained do you usually feel at the end of the day?", min_value=1, max_value=10)
 
     submit = st.form_submit_button("Check")
 
