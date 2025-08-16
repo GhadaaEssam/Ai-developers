@@ -27,16 +27,16 @@ st.caption("Your daily habit whisperer — see if you're set up for success toda
 st.header("📥 Please answer the following questions about your day:")
 
 with st.form("input_form"):
-    hours_coding = st.slider("🧑‍💻 How many hours did you spend focused on coding today?", min_value=0.0,max_value=12.0)
-    coffee_intake_mg = st.number_input("☕ Roughly how much coffee (mg) did you drink today?", min_value=0.0)
-    distractions = st.slider("🔔 How many times were you interrupted (meetings, Slack, etc.)?", min_value=0,max_value=12)
-    sleep_hours = st.slider("😴 How many hours of sleep did you get last night?", min_value=3.0,max_value=10.0)
-    commits = st.slider("📤 How many commits did you push today?", min_value=0, max_value=20)
-    bugs_reported = st.slider("🐞 How many bugs were reported in your code today?", min_value=0, max_value=10)
-    ai_usage_hours = st.slider("🤖 How many hours did you use AI tools like ChatGPT or Copilot?", min_value=0.0,max_value=12.0)
-    cognitive_load = st.slider("🧠 How mentally drained do you feel right now?", min_value=1, max_value=10)
+    hours_coding = st.slider("How many hours will you spend focused on coding today?", min_value=0.0,max_value=12.0)
+    coffee_intake_mg = st.number_input("Roughly how much coffee (mg) will you drink today?", min_value=0.0)
+    distractions = st.slider("How many times you usually get interrupted (meetings, Slack, etc.)?", min_value=0,max_value=12)
+    sleep_hours = st.slider("How many hours of sleep did you get last night?", min_value=3.0,max_value=10.0)
+    commits = st.slider("How many commits you usually push per day?", min_value=0, max_value=20)
+    bugs_reported = st.slider(" How many bugs you usually report per day?", min_value=0, max_value=10)
+    ai_usage_hours = st.slider("How many hours do you usually use AI tools like ChatGPT or Copilot?", min_value=0.0,max_value=12.0)
+    cognitive_load = st.slider("How mentally drained do you feel right now?", min_value=1, max_value=10)
 
-    submit = st.form_submit_button("Predict")
+    submit = st.form_submit_button("Check")
 
 if submit:
     input_df = pd.DataFrame({
