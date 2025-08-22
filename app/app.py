@@ -17,7 +17,7 @@ class FeatureEngineering(BaseEstimator, TransformerMixin):
         return X
 
 # ===== Load Model Pipeline =====
-Pipeline = joblib.load("model_pipeline.pkl")
+Pipeline = joblib.load("app/model_pipeline.pkl")
 
 # ===== UI =====
 st.image("assets/busydev.png", width=700)  # You can remove or change caption
