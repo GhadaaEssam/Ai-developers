@@ -20,7 +20,7 @@ class FeatureEngineering(BaseEstimator, TransformerMixin):
 Pipeline = joblib.load("model_pipeline.pkl")
 
 # ===== UI =====
-st.image("busydev.png", width=700)  # You can remove or change caption
+st.image("assets/busydev.png", width=700)  # You can remove or change caption
 st.title("🔍 Task Success Prediction App")
 st.caption("Your daily habit whisperer — see if you're set up for success today 🎯")
 
