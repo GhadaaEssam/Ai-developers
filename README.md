@@ -11,7 +11,7 @@ We developed a **predictive machine learning model** capable of forecasting dail
 ## 📊 Dataset
 
 The dataset used in this project was published on Kaggle.
-You can access it here: [AI Developer Productivity Dataset (Kaggle)]([https://www.kaggle.com/your-dataset-link](https://www.kaggle.com/datasets/atharvasoundankar/ai-developer-productivity-dataset))
+You can access it here: [AI Developer Productivity Dataset (Kaggle)](https://www.kaggle.com/datasets/atharvasoundankar/ai-developer-productivity-dataset)
 
 ---
 
@@ -116,8 +116,8 @@ You can access it here: [AI Developer Productivity Dataset (Kaggle)]([https://ww
 
 ## 📎 Links
 
-* 📂 [GitHub Repository](#)
-* 📑 [Full Project Report](#)
-* 🌐 [Habit Whisperer Demo (Streamlit)](#)
+* 📂 [GitHub Repository](https://github.com/GhadaaEssam/Ai-developers)
+* 📑 [Full Project Report](https://github.com/GhadaaEssam/Ai-developers/blob/main/report/Project%20report.pdf)
+* 🌐 [Habit Whisperer Demo (Streamlit)](https://task-success-predictor.streamlit.app/)
 
 ---
